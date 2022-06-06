@@ -16,9 +16,7 @@ h1 {
 button {
   height: 60px;
   width: 100px;
-}
-
-#adjust-grid-btn {
+  font-family: "Source Code Pro", monospace;
   margin-bottom: 20px;
 }
 
@@ -72,6 +70,13 @@ button {
   height: 100%;
   width: 100%;
   background-color: rgb(231, 231, 231);
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {

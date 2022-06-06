@@ -27,6 +27,13 @@ function createGrid(num) {
   colorDiv();
 }
 
+function clearSketch() {
+  let gridItems = document.querySelectorAll(".grid-item");
+  for (let i = 0; i < gridItems.length; i++) {
+    gridItems[i].style.backgroundColor = "rgb(231, 231, 231)";
+  }
+}
+
 // Create 256 divs (16x16) by default
 if (!gridContainer.lastElementChild) {
   createGrid(255);
@@ -56,4 +63,10 @@ gridBtn.addEventListener("click", () => {
 
   removeChildren();
   createGrid(Math.pow(userInput, 2) - 1);
+});
+
+// Clear sketch and return to default grid
+const clearSketchBtn = document.querySelector("#clear-sketch");
+clearSketchBtn.addEventListener("click", () => {
+  clearSketch();
 });
